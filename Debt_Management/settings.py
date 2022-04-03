@@ -74,11 +74,11 @@ WSGI_APPLICATION = 'Debt_Management.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'USER': 'deubphicpqjypa',
-        'NAME': 'd31g3g6jp1nkid',
+        'USER': 'mnhffstqjdrviv',
+        'NAME': 'd4hss24gf7hjvq',
         "PORT": '5432',
-        "HOST": 'ec2-3-230-122-20.compute-1.amazonaws.com',
-        'PASSWORD': "d7ed2a548ca1115e0342b5726256d113729546cc79166944966dab94ea991b79"
+        "HOST": 'ec2-34-224-226-38.compute-1.amazonaws.com',
+        'PASSWORD': "9d268393cdc25362669819ed95450ad48581b5fcb695098ada30680646142710"
 
     }
 }
