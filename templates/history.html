@@ -1,0 +1,28 @@
+{% extends 'nav_bar.html' %}
+{% load static %}
+{% block content %}
+    <link rel="stylesheet" href="{% static 'base/css/history.css' %}">
+    <title>History</title>
+    <div class="history">
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Date</th>
+            <th>Current Balance</th>
+            <th>Amount</th>
+            <th>New Balance</th>
+            <th>Option</th>
+        </tr>
+        {% for i in item %}
+        <tr>
+            <td>{{ i.name }}</td>
+            <td>{{ i.date.date }}</td>
+            <td>₱ {{ i.current_balance }}</td>
+            <td>₱ {{ i.payment }}</td>
+            <td>₱ {{ i.new_balance }}</td>
+            <td>{{ i.select }}</td>
+        </tr>
+        {%endfor%}
+    </table>
+    </div>
+{% endblock %}

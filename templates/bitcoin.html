@@ -1,0 +1,29 @@
+{% extends 'nav_bar.html' %}
+{% load static %}
+{% block content %}
+    <link rel="stylesheet" href="{% static 'base/css/bitcoin.css' %}">
+    <div class="bitcoin">
+    <table>
+
+        <tr>
+            <th>Name</th>
+            <th>Rank</th>
+            <th>Price</th>
+            <th>Currency</th>
+            <th>Status</th>
+        </tr>
+        {% for i in ls %}
+    <tr>
+
+        <td>{{ i.name }}</td>
+        <td>#{{ i.rank }}</td>
+        <td>₱ {{ i.price }}</td>
+        <td>{{ i.currency }}%</td>
+        <td>{{ i.status }}</td>
+
+    </tr>
+
+        {% endfor %}
+    </table>
+    </div>
+{%  endblock %}
