@@ -117,6 +117,7 @@ def active():
         sm = Information.objects.get(id=i.id)
         date = monthrange(sm.date.year, sm.date.month)
         date_now = datetime.date.today() - sm.date.date()
+        days = datetime.date.today() - sm.date_debts.date()
         if sm.interest_bool and date_now.days > date[1]:
             interest = datetime.date.today() - sm.date.date()
             interest = interest.days - date[1]
@@ -125,14 +126,17 @@ def active():
             sm.interest = interest
             sm.date_debts = timezone.now()
             sm.interest_bool = False
-        else:
-            date = datetime.date.today() - sm.date_debts.date()
-            if not sm.interest_bool and date.days > 0:
-                interest = date.days + sm.interest
-                balance = date.days + sm.balance
-                sm.balance = balance
-                sm.interest = interest
-                sm.date_debts = datetime.date.today()
+        elif not sm.interest_bool and days.days > 0:
+            interest = date.days + sm.interest
+            balance = date.days + sm.balance
+            sm.balance = balance
+            sm.interest = interest
+            sm.date_debts = datetime.date.today()
+            sm.interest_bool = True
+        elif days.days > 0:
+            sm.balance += 0.25
+            sm.interest += 0.25
+            sm.date_debts = datetime.date.today()
         sm.save()
 
 
