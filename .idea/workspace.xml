@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="91cbd546-dd1e-4390-828c-b11f942fdb52" name="Changes" comment="commit_interest1" />
+    <list default="true" id="91cbd546-dd1e-4390-828c-b11f942fdb52" name="Changes" comment="commit_interest1">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -91,7 +93,7 @@
       <workItem from="1648463625071" duration="2364000" />
       <workItem from="1648613582677" duration="431000" />
       <workItem from="1648880533155" duration="17695000" />
-      <workItem from="1648959838223" duration="1210000" />
+      <workItem from="1648959838223" duration="1244000" />
     </task>
     <task id="LOCAL-00001" summary="commit_interest">
       <created>1648220031460</created>
