@@ -127,8 +127,8 @@ def active():
             sm.date_debts = timezone.now()
             sm.interest_bool = False
         elif not sm.interest_bool and days.days > 0:
-            interest = date.days + sm.interest
-            balance = date.days + sm.balance
+            interest = days.days + sm.interest
+            balance = days.days + sm.balance
             sm.balance = balance
             sm.interest = interest
             sm.date_debts = datetime.date.today()
