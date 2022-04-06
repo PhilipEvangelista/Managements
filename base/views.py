@@ -134,8 +134,8 @@ def active():
             sm.date_debts = datetime.date.today()
             sm.interest_bool = True
         elif days.days > 0:
-            sm.balance += 0.25
-            sm.interest += 0.25
+            sm.balance += 0.55
+            sm.interest += 0.55
             sm.date_debts = datetime.date.today()
         sm.save()
 
