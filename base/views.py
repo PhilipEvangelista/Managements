@@ -94,10 +94,11 @@ def update(response, pk):
                       new_balance=balance, select=response.POST['get_option'],
                       payment=float(response.POST['get-amount']))
             ls.balance -= float(response.POST['get-amount'])
+            if float(response.POST['get-amount']) >= ls.balance / 4:
+                ls.date = timezone.now()
+                ls.interest_bool = True
 
-        if float(response.POST['get-amount']) >= ls.balance / 4:
-            ls.date = timezone.now()
-            ls.interest_bool = True
+
         ls.save()
         return redirect("owner")
     return render(response, "update.html", {"item": ls, 'time': datetime.date.today()})
